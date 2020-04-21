@@ -14,7 +14,7 @@ namespace DppInventory
             string server = "localhost";
             string db = "dppMotors";
             string user = "root";
-            string password = "Charlie 2000";
+            string password = "";
 
             string stringConnection = "Database=" + db + "; Data Source=" + 
                 server + "; User Id=" + user + "; Password=" + password + "";
