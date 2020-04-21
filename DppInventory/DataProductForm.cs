@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using MySql.Data.MySqlClient;
 
 namespace DppInventory
 {
@@ -51,9 +52,44 @@ namespace DppInventory
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
+            addToDB();
+            cleanTxt();
+        }
+
+        private void addToDB()
+        {
+            string id = "XXXX"; //This id it'll generate automatically 
             string name = txtName.Text;
-            double price = double.Parse(txtPrice.Text);
             int stock = (int) numericStock.Value;
+            double price = double.Parse(txtPrice.Text);
+
+            string sql = "INSERT TO product (id_p, name_p, stock_p, price_p) VALUES ('"+ id + "', '" + name + "', '" + stock + "', '" + price + "')";
+
+            MySqlConnection conexionDB = Connection.connection();
+            conexionDB.Open();
+
+            try
+            {
+                MySqlCommand command = new MySqlCommand(sql, conexionDB);
+                command.ExecuteNonQuery();
+                MessageBox.Show("Registro guardado");
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error al guardar: \n" + ex.Message);
+            }
+            finally
+            {
+                conexionDB.Close();
+            }
+
+        }
+
+        private void cleanTxt()
+        {
+            txtName.Text = "";
+            txtPrice.Text = "";
+            numericStock.Value = 0;
         }
     }
 }
