@@ -1,0 +1,17 @@
+C:\Users\Charlie\source\repos\DppInventory\DppInventory\bin\Debug\DppInventory.exe.config
+C:\Users\Charlie\source\repos\DppInventory\DppInventory\bin\Debug\DppInventory.exe
+C:\Users\Charlie\source\repos\DppInventory\DppInventory\bin\Debug\DppInventory.pdb
+C:\Users\Charlie\source\repos\DppInventory\DppInventory\obj\Debug\DppInventory.csprojAssemblyReference.cache
+C:\Users\Charlie\source\repos\DppInventory\DppInventory\obj\Debug\DppInventory.Properties.Resources.resources
+C:\Users\Charlie\source\repos\DppInventory\DppInventory\obj\Debug\DppInventory.csproj.GenerateResource.cache
+C:\Users\Charlie\source\repos\DppInventory\DppInventory\obj\Debug\DppInventory.csproj.CoreCompileInputs.cache
+C:\Users\Charlie\source\repos\DppInventory\DppInventory\obj\Debug\DppInventory.exe
+C:\Users\Charlie\source\repos\DppInventory\DppInventory\obj\Debug\DppInventory.pdb
+C:\Users\Charlie\source\repos\DppInventory\DppInventory\obj\Debug\DppInventory.PrincipalForm.resources
+C:\Users\Charlie\source\repos\DppInventory\DppInventory\obj\Debug\DppInventory.ProductForm.resources
+C:\Users\Charlie\source\repos\DppInventory\DppInventory\bin\Debug\MySql.Data.dll
+C:\Users\Charlie\source\repos\DppInventory\DppInventory\bin\Debug\MySql.Data.xml
+C:\Users\Charlie\source\repos\DppInventory\DppInventory\obj\Debug\DppInventory.DataProductForm.resources
+C:\Users\Charlie\source\repos\DppInventory\DppInventory\obj\Debug\DppInventory.csproj.CopyComplete
+C:\Users\Charlie\source\repos\DppInventory\DppInventory\obj\Debug\DppInventory.DataProvederForm.resources
+C:\Users\Charlie\source\repos\DppInventory\DppInventory\obj\Debug\DppInventory.ProvederForm.resources
