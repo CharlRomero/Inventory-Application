@@ -46,11 +46,17 @@ namespace DppInventory
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
-            string name = txtName.Text;            
+            addToDB();
+            cleanTxt();
+        }
+
+        private void addToDB()
+        {
+            string name = txtName.Text;
             string telfNumber = txtTelfNumber.Text;
             string email = txtEmail.Text;
 
-            string sql = "INSERT INTO proveder (name_pr, telf_number_pr, email_pr) VALUES ('"+name+ "', '" + telfNumber + "', '" + email + "')";
+            string sql = "INSERT INTO proveder (name_pr, telf_number_pr, email_pr) VALUES ('" + name + "', '" + telfNumber + "', '" + email + "')";
 
             MySqlConnection conexionDB = Connection.connection();
             conexionDB.Open();
@@ -60,7 +66,8 @@ namespace DppInventory
                 MySqlCommand command = new MySqlCommand(sql, conexionDB);
                 command.ExecuteNonQuery();
                 MessageBox.Show("Registro guardado");
-            }catch(MySqlException ex)
+            }
+            catch (MySqlException ex)
             {
                 MessageBox.Show("Error al guardar: \n" + ex.Message);
             }
@@ -68,6 +75,13 @@ namespace DppInventory
             {
                 conexionDB.Close();
             }
+        }
+
+        private void cleanTxt()
+        {
+            txtName.Text = "";
+            txtTelfNumber.Text = "";
+            txtEmail.Text = "";
         }
 
         private void topPanel_MouseDown(object sender, MouseEventArgs e)
