@@ -52,28 +52,29 @@ namespace DppInventory
 
         private void addToDB()
         {
-            string name = txtName.Text;
-            string telfNumber = txtTelfNumber.Text;
-            string email = txtEmail.Text;
+            bool check = false;
 
-            string sql = "INSERT INTO proveder (name_pr, telf_number_pr, email_pr) VALUES ('" + name + "', '" + telfNumber + "', '" + email + "')";
+            Proveder _proveder = new Proveder();
+            _proveder.Name = txtName.Text;
+            _proveder.TelfNumber = txtTelfNumber.Text;
+            _proveder.Email = txtEmail.Text;
+            
+            ProvederController controller = new ProvederController();
 
-            MySqlConnection conexionDB = Connection.connection();
-            conexionDB.Open();
-
-            try
+            if (txtName.Text != "")
             {
-                MySqlCommand command = new MySqlCommand(sql, conexionDB);
-                command.ExecuteNonQuery();
-                MessageBox.Show("Registro guardado");
+                _proveder.Name = txtName.Text;
+                check = controller.upDate(_proveder);
             }
-            catch (MySqlException ex)
+            else
             {
-                MessageBox.Show("Error al guardar: \n" + ex.Message);
+                check = controller.insert(_proveder);
             }
-            finally
+
+            if (check)
             {
-                conexionDB.Close();
+                MessageBox.Show("Registro Guardado");
+                cleanTxt();
             }
         }
 

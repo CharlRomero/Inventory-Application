@@ -117,7 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="provederBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnSearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAASBJREFUWEft
+        lD1OAzEQRvcEiJKfgobbBOUKXIKfA8B9qFEUOoocgoIa0QAFVPA9a1ck3s/GiUyUwk96UjyTmZ3Y3nSN
+        xq7y/U8W44prWMzaBX/QBqg6wJmcyw/53n+eyBzVBriVQy72RqYYvlOMK+CXE/uUF/Kw97KPkUvthOuX
+        xRU8SGI8POZKkuM4HK5fFlfAeRM7CKtViJF7C6sxrl8WV0BzYmx7zLEk9xJWY1y/LK6A7SXGmcdcS3L3
+        YTXG9cviCrhgxLhwnPlRLw//kuSm0uH6ZUkV8KoNOeej3JMxQ76YXAE7wXFwKV/lTJ7LZ0nNQu7LZaoO
+        kOJEPknq7ggssZUBgLeB/4vTsPplawOkaANsPEBti3HFNWw0do2u+wHFGtk5nfxXnQAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <metadata name="productBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
 </root>

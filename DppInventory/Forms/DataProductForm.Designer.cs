@@ -43,6 +43,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericStock)).BeginInit();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
@@ -207,11 +208,20 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Nombre:";
             // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(192, 112);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 6;
+            this.txtId.Visible = false;
+            // 
             // DataProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 280);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.btnCancel);
@@ -256,5 +266,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

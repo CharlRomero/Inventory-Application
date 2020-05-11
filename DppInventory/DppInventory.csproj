@@ -51,52 +51,53 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
-    <Compile Include="DataProductForm.cs">
+    <Compile Include="Controllers\ControllerRepository.cs" />
+    <Compile Include="Forms\DataProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DataProductForm.Designer.cs">
+    <Compile Include="Forms\DataProductForm.Designer.cs">
       <DependentUpon>DataProductForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataProvederForm.cs">
+    <Compile Include="Forms\DataProvederForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DataProvederForm.Designer.cs">
+    <Compile Include="Forms\DataProvederForm.Designer.cs">
       <DependentUpon>DataProvederForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrincipalForm.cs">
+    <Compile Include="Forms\PrincipalForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrincipalForm.Designer.cs">
+    <Compile Include="Forms\PrincipalForm.Designer.cs">
       <DependentUpon>PrincipalForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Product.cs" />
-    <Compile Include="ProductController.cs" />
-    <Compile Include="ProductForm.cs">
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Forms\ProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProductForm.Designer.cs">
+    <Compile Include="Forms\ProductForm.Designer.cs">
       <DependentUpon>ProductForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveder.cs" />
-    <Compile Include="ProvederController.cs" />
-    <Compile Include="ProvederForm.cs">
+    <Compile Include="Controllers\ProvederController.cs" />
+    <Compile Include="Forms\ProvederForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProvederForm.Designer.cs">
+    <Compile Include="Forms\ProvederForm.Designer.cs">
       <DependentUpon>ProvederForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DataProductForm.resx">
+    <EmbeddedResource Include="Forms\DataProductForm.resx">
       <DependentUpon>DataProductForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DataProvederForm.resx">
+    <EmbeddedResource Include="Forms\DataProvederForm.resx">
       <DependentUpon>DataProvederForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrincipalForm.resx">
+    <EmbeddedResource Include="Forms\PrincipalForm.resx">
       <DependentUpon>PrincipalForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductForm.resx">
+    <EmbeddedResource Include="Forms\ProductForm.resx">
       <DependentUpon>ProductForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -108,9 +109,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ProvederForm.resx">
+    <EmbeddedResource Include="Forms\ProvederForm.resx">
       <DependentUpon>ProvederForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="Properties\DataSources\Product.datasource" />
     <None Include="Properties\DataSources\Proveder.datasource" />
     <None Include="Properties\Settings.settings">

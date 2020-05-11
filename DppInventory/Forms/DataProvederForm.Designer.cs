@@ -38,6 +38,7 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtTelfNumber = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -149,11 +150,20 @@
             this.txtEmail.Size = new System.Drawing.Size(188, 23);
             this.txtEmail.TabIndex = 8;
             // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(161, 32);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 9;
+            this.txtId.Visible = false;
+            // 
             // DataProvederForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 252);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtTelfNumber);
             this.Controls.Add(this.txtName);
@@ -184,5 +194,6 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtTelfNumber;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

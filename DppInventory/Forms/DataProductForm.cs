@@ -58,31 +58,31 @@ namespace DppInventory
 
         private void addToDB()
         {
-            string id = "XXXX"; //This id it'll generate automatically 
-            string name = txtName.Text;
-            int stock = (int) numericStock.Value;
-            double price = double.Parse(txtPrice.Text);
+            bool check = false;
 
-            string sql = "INSERT TO product (id_p, name_p, stock_p, price_p) VALUES ('"+ id + "', '" + name + "', '" + stock + "', '" + price + "')";
+            Product _product = new Product();
+            _product.Id = _product.generateId(_product.Name);
+            _product.Name = txtName.Text;
+            _product.Stock = (int)numericStock.Value;
+            _product.Price = double.Parse(txtPrice.Text);
 
-            MySqlConnection conexionDB = Connection.connection();
-            conexionDB.Open();
+            ProductController controller = new ProductController();
 
-            try
+            if (txtId.Text != "")
             {
-                MySqlCommand command = new MySqlCommand(sql, conexionDB);
-                command.ExecuteNonQuery();
-                MessageBox.Show("Registro guardado");
+                _product.Id = txtId.Text;
+                check = controller.upDate(_product);
             }
-            catch (MySqlException ex)
+            else
             {
-                MessageBox.Show("Error al guardar: \n" + ex.Message);
-            }
-            finally
-            {
-                conexionDB.Close();
+                check = controller.insert(_product);
             }
 
+            if (check)
+            {
+                MessageBox.Show("Registro Guardado");
+                cleanTxt();                
+            }
         }
 
         private void cleanTxt()

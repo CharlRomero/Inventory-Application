@@ -15,6 +15,7 @@ namespace DppInventory
         public ProductForm()
         {
             InitializeComponent();
+            LoadDataGrid(null);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -25,10 +26,11 @@ namespace DppInventory
 
         }
 
-        private void loadDataGrid(string data)
+        private void LoadDataGrid(string data)
         {
             List<Product> list = new List<Product>();
             ProductController _productController = new ProductController();
+            productGridView.DataSource = _productController.Query(data);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -36,5 +38,15 @@ namespace DppInventory
             this.Close();
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string data = txtSearch.Text;
+            LoadDataGrid(data);
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadDataGrid(null);
+        }
     }
 }

@@ -8,15 +8,15 @@ namespace DppInventory
 {
     class Proveder
     {
-        private string name;
-        private Product product;
-        private string telfNumber;
-        private string email;
+        private int id_pr;
+        private string name_pr;        
+        private string telfNumber_pr;
+        private string email_pr;
 
-        public string Name { get => name; set => name = value; }
-        public Product Product { get => product; set => product = value; }
-        public string TelfNumber { get => telfNumber; set => telfNumber = value; }
-        public string Email { get => email; set => email = value; }
+        public int Id { get => id_pr; set => id_pr = value; }
+        public string Name { get => name_pr; set => name_pr = value; }        
+        public string TelfNumber { get => telfNumber_pr; set => telfNumber_pr = value; }
+        public string Email { get => email_pr; set => email_pr = value; }
 
         public Proveder(){
         }
