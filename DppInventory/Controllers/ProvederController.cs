@@ -83,7 +83,7 @@ namespace DppInventory
         {
             bool check;
 
-            string sql = "UPDATE proveder SET id_pr = '" + proveder.Id + "', name_pr = '" + proveder.Name + "', telf_number_pr = '" + proveder.TelfNumber + "', email_pr = '" + proveder.Email + "'";
+            string sql = "UPDATE proveder SET name_pr='" + proveder.Name + "', telf_number_pr='" + proveder.TelfNumber + "', email_pr='" + proveder.Email + "' WHERE id_pr='"+proveder.Id+"'";
 
             try
             {
@@ -105,15 +105,15 @@ namespace DppInventory
         public bool delete(string name)
         {
             bool check;
-
-            string sql = "DELETE FROM proveder WHERE name_pr = '" + name + "'";
+            
+            string sql = "DELETE FROM proveder WHERE name_pr='" + name + "'";
 
             try
             {
                 MySqlConnection connectionDB = base.connection();
                 connectionDB.Open();
                 MySqlCommand command = new MySqlCommand(sql, connectionDB);
-                command.ExecuteNonQuery();
+                command.ExecuteNonQuery();                
                 check = true;
             }
             catch (MySqlException ex)

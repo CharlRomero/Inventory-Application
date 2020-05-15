@@ -35,7 +35,7 @@ namespace DppInventory
             bool check;
 
             Proveder _proveder = new Proveder
-            {
+            {                
                 Name = txtName.Text,
                 TelfNumber = txtTelfNumber.Text,
                 Email = txtEmail.Text
@@ -97,7 +97,7 @@ namespace DppInventory
 
             if(warning() == DialogResult.Yes)
             {
-                string name = provederDataGrid.CurrentRow.Cells[1].ToString();
+                string name = provederDataGrid.CurrentRow.Cells[1].Value.ToString();
 
                 ProvederController _controller = new ProvederController();
                 check = _controller.delete(name);
